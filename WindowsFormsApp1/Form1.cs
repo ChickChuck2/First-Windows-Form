@@ -34,6 +34,18 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show(String.Format("Você clicou no {0}", sexoradio.Name));
             }
+            if (loboradio2.Checked)
+            {
+                MessageBox.Show(String.Format("Traga a champanhe, o cara aqui e um filha da puta, e esse filha da puta clicou em {0}", loboradio2.Text));
+            }
+            if (pairado.Checked)
+            {
+                MessageBox.Show(String.Format("PARA CAMINHAR NO {0}", pairado.Name));
+            }
+            if (atumakkkk.Checked)
+            {
+                MessageBox.Show(String.Format("ATUMALACA KKK {0}", atumakkkk.Name));
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
