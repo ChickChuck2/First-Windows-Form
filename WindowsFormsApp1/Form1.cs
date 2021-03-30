@@ -17,6 +17,17 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
 
+            Rectangle resolution = Screen.PrimaryScreen.Bounds;
+
+            String resW = resolution.Width.ToString();
+            String resH = resolution.Height.ToString();
+
+            String ResolutionM = resW + "x" + resH;
+
+
+            Resolutions.BeginUpdate();
+            Resolutions.Nodes[0].Nodes.Add(ResolutionM);
+            Resolutions.EndUpdate();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -96,6 +107,21 @@ namespace WindowsFormsApp1
 
         }
 
+        private void FullScreen_Click(object sender, EventArgs e)
+        {
+            FormBorderStyle = FormBorderStyle.None;
+            WindowState = FormWindowState.Maximized;
+        }
 
+        private void Resolutions_NodeMouseDoubleClick(object sender, TreeViewEventArgs e)
+        {
+
+            MessageBox.Show("CU");
+        }
+
+        private void Confirmresolution_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

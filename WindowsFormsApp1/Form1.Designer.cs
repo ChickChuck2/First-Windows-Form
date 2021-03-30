@@ -29,18 +29,23 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Resoluções");
             this.Botao1 = new System.Windows.Forms.Button();
             this.barradeprogresso = new System.Windows.Forms.ProgressBar();
             this.texto1 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.sexoradio = new System.Windows.Forms.RadioButton();
-            this.loboradio2 = new System.Windows.Forms.RadioButton();
-            this.atumakkkk = new System.Windows.Forms.RadioButton();
             this.pairado = new System.Windows.Forms.RadioButton();
+            this.atumakkkk = new System.Windows.Forms.RadioButton();
+            this.loboradio2 = new System.Windows.Forms.RadioButton();
+            this.sexoradio = new System.Windows.Forms.RadioButton();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.Resolutions = new System.Windows.Forms.TreeView();
+            this.FullScreen = new System.Windows.Forms.Button();
+            this.Confirmresolution = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // Botao1
@@ -100,37 +105,16 @@ namespace WindowsFormsApp1
             this.tabPage1.Text = "SEXO DA PAGINA 1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // pairado
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(810, 450);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "SEXO DA PAGINA 2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // sexoradio
-            // 
-            this.sexoradio.AutoSize = true;
-            this.sexoradio.Location = new System.Drawing.Point(306, 313);
-            this.sexoradio.Name = "sexoradio";
-            this.sexoradio.Size = new System.Drawing.Size(49, 17);
-            this.sexoradio.TabIndex = 3;
-            this.sexoradio.TabStop = true;
-            this.sexoradio.Text = "Sexo";
-            this.sexoradio.UseVisualStyleBackColor = true;
-            // 
-            // loboradio2
-            // 
-            this.loboradio2.AutoSize = true;
-            this.loboradio2.Location = new System.Drawing.Point(306, 336);
-            this.loboradio2.Name = "loboradio2";
-            this.loboradio2.Size = new System.Drawing.Size(106, 17);
-            this.loboradio2.TabIndex = 4;
-            this.loboradio2.TabStop = true;
-            this.loboradio2.Text = "Lobotomia frontal";
-            this.loboradio2.UseVisualStyleBackColor = true;
+            this.pairado.AutoSize = true;
+            this.pairado.Location = new System.Drawing.Point(409, 336);
+            this.pairado.Name = "pairado";
+            this.pairado.Size = new System.Drawing.Size(63, 17);
+            this.pairado.TabIndex = 6;
+            this.pairado.TabStop = true;
+            this.pairado.Text = "Meu pai";
+            this.pairado.UseVisualStyleBackColor = true;
             // 
             // atumakkkk
             // 
@@ -143,16 +127,72 @@ namespace WindowsFormsApp1
             this.atumakkkk.Text = "ATUMALACA";
             this.atumakkkk.UseVisualStyleBackColor = true;
             // 
-            // pairado
+            // loboradio2
             // 
-            this.pairado.AutoSize = true;
-            this.pairado.Location = new System.Drawing.Point(409, 336);
-            this.pairado.Name = "pairado";
-            this.pairado.Size = new System.Drawing.Size(63, 17);
-            this.pairado.TabIndex = 6;
-            this.pairado.TabStop = true;
-            this.pairado.Text = "Meu pai";
-            this.pairado.UseVisualStyleBackColor = true;
+            this.loboradio2.AutoSize = true;
+            this.loboradio2.Location = new System.Drawing.Point(306, 336);
+            this.loboradio2.Name = "loboradio2";
+            this.loboradio2.Size = new System.Drawing.Size(106, 17);
+            this.loboradio2.TabIndex = 4;
+            this.loboradio2.TabStop = true;
+            this.loboradio2.Text = "Lobotomia frontal";
+            this.loboradio2.UseVisualStyleBackColor = true;
+            // 
+            // sexoradio
+            // 
+            this.sexoradio.AutoSize = true;
+            this.sexoradio.Location = new System.Drawing.Point(306, 313);
+            this.sexoradio.Name = "sexoradio";
+            this.sexoradio.Size = new System.Drawing.Size(49, 17);
+            this.sexoradio.TabIndex = 3;
+            this.sexoradio.TabStop = true;
+            this.sexoradio.Text = "Sexo";
+            this.sexoradio.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.Confirmresolution);
+            this.tabPage2.Controls.Add(this.Resolutions);
+            this.tabPage2.Controls.Add(this.FullScreen);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(810, 450);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "SEXO DA PAGINA 2";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // Resolutions
+            // 
+            this.Resolutions.Location = new System.Drawing.Point(7, 36);
+            this.Resolutions.Name = "Resolutions";
+            treeNode1.Name = "Resolutions";
+            treeNode1.Text = "Resoluções";
+            this.Resolutions.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode1});
+            this.Resolutions.Size = new System.Drawing.Size(123, 91);
+            this.Resolutions.TabIndex = 4;
+            this.Resolutions.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.Resolutions_NodeMouseDoubleClick);
+            // 
+            // FullScreen
+            // 
+            this.FullScreen.Location = new System.Drawing.Point(6, 6);
+            this.FullScreen.Name = "FullScreen";
+            this.FullScreen.Size = new System.Drawing.Size(75, 23);
+            this.FullScreen.TabIndex = 0;
+            this.FullScreen.Text = "FullScreen";
+            this.FullScreen.UseVisualStyleBackColor = true;
+            this.FullScreen.Click += new System.EventHandler(this.FullScreen_Click);
+            // 
+            // Confirmresolution
+            // 
+            this.Confirmresolution.Location = new System.Drawing.Point(7, 134);
+            this.Confirmresolution.Name = "Confirmresolution";
+            this.Confirmresolution.Size = new System.Drawing.Size(123, 23);
+            this.Confirmresolution.TabIndex = 5;
+            this.Confirmresolution.Text = "Confirmar resolução";
+            this.Confirmresolution.UseVisualStyleBackColor = true;
+            this.Confirmresolution.Click += new System.EventHandler(this.Confirmresolution_Click);
             // 
             // Form1
             // 
@@ -166,6 +206,7 @@ namespace WindowsFormsApp1
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -182,6 +223,9 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.RadioButton loboradio2;
         private System.Windows.Forms.RadioButton sexoradio;
         private System.Windows.Forms.RadioButton atumakkkk;
+        private System.Windows.Forms.Button FullScreen;
+        private System.Windows.Forms.TreeView Resolutions;
+        private System.Windows.Forms.Button Confirmresolution;
     }
 }
 
