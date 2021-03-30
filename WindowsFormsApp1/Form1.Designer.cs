@@ -31,6 +31,7 @@ namespace WindowsFormsApp1
         {
             this.Botao1 = new System.Windows.Forms.Button();
             this.texto1 = new System.Windows.Forms.Label();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // Botao1
@@ -55,11 +56,20 @@ namespace WindowsFormsApp1
             this.texto1.Text = "Você vai Morrer!!";
             this.texto1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(334, 269);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(128, 35);
+            this.progressBar1.TabIndex = 2;
+            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(842, 500);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.texto1);
             this.Controls.Add(this.Botao1);
             this.Name = "Form1";
@@ -74,6 +84,7 @@ namespace WindowsFormsApp1
 
         private System.Windows.Forms.Button Botao1;
         private System.Windows.Forms.Label texto1;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 
