@@ -16,19 +16,24 @@ namespace WindowsFormsApp1
         public Form1()
         {
             InitializeComponent();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             SoundPlayer somzao = new SoundPlayer(@"c:\Windows\Media\chimes.wav");
+            somzao.Play();
 
             MessageBox.Show("Botão foi clicado caralho");
 
-            somzao.Play();
-
             texto1.Text = "Procuro sexo";
 
-            progressBar1.Value = 50;
+            barradeprogresso.Value = 50;
+
+            if (sexoradio.Checked)
+            {
+                MessageBox.Show(String.Format("Você clicou no {0}", sexoradio.Name));
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -39,7 +44,7 @@ namespace WindowsFormsApp1
         private void label1_Click(object sender, EventArgs e)
         {
 
-            progressBar1.Value =  76;
+            barradeprogresso.Value =  76;
 
             IEnumerable<int> squares = Enumerable.Range(1, 10).Select(x => x);
 
@@ -74,9 +79,11 @@ namespace WindowsFormsApp1
 
         }
 
-        private void progressBar1_Click(object sender, EventArgs e)
+        private void radioButton1_CheckedChanged(Object sender,EventArgs e)
         {
-            
+
         }
+
+
     }
 }
